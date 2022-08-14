@@ -46,24 +46,27 @@ a {
 
 /* Menu-hover */
 .list-menu {
-    display: none;
+    visibility: hidden;
     color: rgba(255, 255, 255, 0.5);
     height: 94vh;
-    max-width: 80vw;
+    width: 0;
     background-color: #111111;
     padding: 3rem 2rem;
     position: absolute;
     right: 0;
     top: 6vh;
-    width: 20rem;
-    transform: translateX(0);
+    overflow: hidden;
+    transition: width 1s ease;
     box-shadow: 0 0 1.5rem 0 rgb(0 0 0 / 20%);
     z-index: 10002;
+    
 }
 
 
 .menu:hover .list-menu {
-    display: block;
+    width: 20vw;
+    visibility: visible;
+    
 }
 
 .item-menu {
